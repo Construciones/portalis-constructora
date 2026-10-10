@@ -106,6 +106,25 @@ footer{background:#061b29;color:#c7d7df;padding:32px 0}
 .catalog-card h4{padding:22px 22px 0}
 .catalog-card p{padding:10px 22px 0;flex:1}
 .catalog-card .btn{margin:20px 22px 22px;align-self:flex-start}
+
+/* Galería Portalis */
+.portalis-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.gallery-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 9px 30px rgba(16,53,79,.12);display:flex;flex-direction:column}
+.gallery-card>img{display:block;width:100%;height:230px;object-fit:cover}
+.gallery-info{padding:22px;display:flex;flex-direction:column;flex:1}
+.gallery-info h3{margin:0 0 10px;color:#163b5b}.gallery-info p{margin:0 0 18px;flex:1;line-height:1.6}
+.gallery-actions{display:flex;flex-wrap:wrap;gap:10px}
+.gallery-actions button,.gallery-actions a{border-radius:9px;padding:11px 14px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;text-align:center}
+.gallery-view{border:1px solid #1b577f;color:#1b577f;background:#fff}
+.gallery-quote{border:1px solid #1b577f;background:#1b577f;color:#fff!important}
+.gallery-modal[hidden]{display:none!important}.gallery-modal{position:fixed;inset:0;z-index:9999;background:rgba(5,20,32,.82);display:grid;place-items:center;padding:18px}
+.gallery-dialog{position:relative;background:#fff;border-radius:16px;padding:26px;max-width:850px;width:100%;max-height:95vh;overflow:auto}
+.gallery-dialog h2{padding-right:38px;color:#163b5b}.gallery-dialog p{line-height:1.5}
+.gallery-close{position:absolute;top:10px;right:14px;border:0;background:transparent;font-size:36px;cursor:pointer;color:#163b5b}
+.gallery-display{display:flex;align-items:center;gap:8px}.gallery-display img{width:calc(100% - 100px);max-height:55vh;object-fit:contain;border-radius:10px}
+.gallery-display button{width:42px;height:48px;flex-shrink:0;border:0;border-radius:8px;background:#1b577f;color:#fff;cursor:pointer;font-size:22px}
+.gallery-counter,.gallery-note{text-align:center;font-size:14px;color:#536779}
+@media(max-width:700px){.portalis-gallery{grid-template-columns:1fr}.gallery-card>img{height:210px}.gallery-dialog{padding:18px}.gallery-display img{width:calc(100% - 88px)}}
 </style>
 <style>
 .catalog-card .service-actions{display:flex;gap:10px;flex-wrap:wrap;padding:16px 22px 22px;margin-top:auto}
@@ -228,19 +247,8 @@ footer{background:#061b29;color:#c7d7df;padding:32px 0}
 </div>
 </div>
 </section>
-<section class="section" id="proyectos">
-<div class="container">
-<div class="section-head">
-<h2>Proyectos que podemos convertir en realidad.</h2>
-<p>Esta galería está preparada para incorporar tus renders, fotografías y proyectos terminados.</p>
-</div>
-<div class="project-grid">
-<div class="project"><span>Residencial moderno</span></div>
-<div class="project"><span>Vivienda familiar</span></div>
-<div class="project"><span>Proyecto arquitectónico</span></div>
-</div>
-</div>
-</section>
+<section class="section" id="proyectos"><div class="container"><div class="section-head"><h2>Galería de proyectos</h2><p>Explora nuestros tipos de proyectos. Las imágenes son provisionales y podrán sustituirse por fotografías y renders reales.</p></div><div class="portalis-gallery"><article class="gallery-card"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20900%20600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23dcebf5%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237ba7c8%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22900%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M0%20460L230%20315%20470%20470%20650%20340%20900%20490V600H0Z%22%20fill%3D%22%23ffffff%22%20opacity%3D%22.19%22/%3E%3Ctext%20x%3D%22450%22%20y%3D%22255%22%20font-size%3D%22105%22%20text-anchor%3D%22middle%22%3E%F0%9F%8F%A0%3C/text%3E%3Ctext%20x%3D%22450%22%20y%3D%22335%22%20font-size%3D%2234%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22bold%22%20fill%3D%22%23183c58%22%20text-anchor%3D%22middle%22%3EViviendas%3C/text%3E%3Ctext%20x%3D%22450%22%20y%3D%22390%22%20font-size%3D%2222%22%20font-family%3D%22Arial%2Csans-serif%22%20fill%3D%22%23244e65%22%20text-anchor%3D%22middle%22%3EImagen%20provisional%20%C2%B7%20Portalis%20Constructora%3C/text%3E%3C/svg%3E" alt="Imagen provisional de Viviendas" loading="lazy"/><div class="gallery-info"><h3>Viviendas</h3><p>Diseño y construcción de viviendas modernas, funcionales y adaptadas a cada familia.</p><div class="gallery-actions"><button type="button" class="gallery-view" data-gallery="0">Ver proyecto</button><a class="gallery-quote" href="https://wa.me/18496532062?text=Hola%2C%20Portalis%20Constructora.%20Me%20interesa%20solicitar%20un%20proyecto%20similar%20de%20Viviendas.%20Quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer">Solicitar proyecto similar</a></div></div></article><article class="gallery-card"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20900%20600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23e5f3f1%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%236da99d%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22900%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M0%20460L230%20315%20470%20470%20650%20340%20900%20490V600H0Z%22%20fill%3D%22%23ffffff%22%20opacity%3D%22.19%22/%3E%3Ctext%20x%3D%22450%22%20y%3D%22255%22%20font-size%3D%22105%22%20text-anchor%3D%22middle%22%3E%F0%9F%8F%8A%3C/text%3E%3Ctext%20x%3D%22450%22%20y%3D%22335%22%20font-size%3D%2234%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22bold%22%20fill%3D%22%23183c58%22%20text-anchor%3D%22middle%22%3EPiscinas%3C/text%3E%3Ctext%20x%3D%22450%22%20y%3D%22390%22%20font-size%3D%2222%22%20font-family%3D%22Arial%2Csans-serif%22%20fill%3D%22%23244e65%22%20text-anchor%3D%22middle%22%3EImagen%20provisional%20%C2%B7%20Portalis%20Constructora%3C/text%3E%3C/svg%3E" alt="Imagen provisional de Piscinas" loading="lazy"/><div class="gallery-info"><h3>Piscinas</h3><p>Espacios recreativos y piscinas integradas al diseño de tu propiedad.</p><div class="gallery-actions"><button type="button" class="gallery-view" data-gallery="1">Ver proyecto</button><a class="gallery-quote" href="https://wa.me/18496532062?text=Hola%2C%20Portalis%20Constructora.%20Me%20interesa%20solicitar%20un%20proyecto%20similar%20de%20Piscinas.%20Quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer">Solicitar proyecto similar</a></div></div></article><article class="gallery-card"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20900%20600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23eae8f7%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%238a83b6%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22900%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M0%20460L230%20315%20470%20470%20650%20340%20900%20490V600H0Z%22%20fill%3D%22%23ffffff%22%20opacity%3D%22.19%22/%3E%3Ctext%20x%3D%22450%22%20y%3D%22255%22%20font-size%3D%22105%22%20text-anchor%3D%22middle%22%3E%F0%9F%93%90%3C/text%3E%3Ctext%20x%3D%22450%22%20y%3D%22335%22%20font-size%3D%2234%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22bold%22%20fill%3D%22%23183c58%22%20text-anchor%3D%22middle%22%3EProyectos%20arquitect%C3%B3nicos%3C/text%3E%3Ctext%20x%3D%22450%22%20y%3D%22390%22%20font-size%3D%2222%22%20font-family%3D%22Arial%2Csans-serif%22%20fill%3D%22%23244e65%22%20text-anchor%3D%22middle%22%3EImagen%20provisional%20%C2%B7%20Portalis%20Constructora%3C/text%3E%3C/svg%3E" alt="Imagen provisional de Proyectos arquitectónicos" loading="lazy"/><div class="gallery-info"><h3>Proyectos arquitectónicos</h3><p>Anteproyectos, planos, visualizaciones 3D y soluciones arquitectónicas.</p><div class="gallery-actions"><button type="button" class="gallery-view" data-gallery="2">Ver proyecto</button><a class="gallery-quote" href="https://wa.me/18496532062?text=Hola%2C%20Portalis%20Constructora.%20Me%20interesa%20solicitar%20un%20proyecto%20similar%20de%20Proyectos%20arquitect%C3%B3nicos.%20Quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer">Solicitar proyecto similar</a></div></div></article><article class="gallery-card"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20900%20600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23f4e9df%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c99d7b%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22900%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M0%20460L230%20315%20470%20470%20650%20340%20900%20490V600H0Z%22%20fill%3D%22%23ffffff%22%20opacity%3D%22.19%22/%3E%3Ctext%20x%3D%22450%22%20y%3D%22255%22%20font-size%3D%22105%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A8%3C/text%3E%3Ctext%20x%3D%22450%22%20y%3D%22335%22%20font-size%3D%2234%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22bold%22%20fill%3D%22%23183c58%22%20text-anchor%3D%22middle%22%3ERemodelaciones%3C/text%3E%3Ctext%20x%3D%22450%22%20y%3D%22390%22%20font-size%3D%2222%22%20font-family%3D%22Arial%2Csans-serif%22%20fill%3D%22%23244e65%22%20text-anchor%3D%22middle%22%3EImagen%20provisional%20%C2%B7%20Portalis%20Constructora%3C/text%3E%3C/svg%3E" alt="Imagen provisional de Remodelaciones" loading="lazy"/><div class="gallery-info"><h3>Remodelaciones</h3><p>Transformación de cocinas, baños, interiores y espacios existentes.</p><div class="gallery-actions"><button type="button" class="gallery-view" data-gallery="3">Ver proyecto</button><a class="gallery-quote" href="https://wa.me/18496532062?text=Hola%2C%20Portalis%20Constructora.%20Me%20interesa%20solicitar%20un%20proyecto%20similar%20de%20Remodelaciones.%20Quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer">Solicitar proyecto similar</a></div></div></article></div></div></section>
+<div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle" hidden><div class="gallery-dialog"><button class="gallery-close" id="galleryClose" type="button" aria-label="Cerrar galería">×</button><h2 id="galleryModalTitle"></h2><p id="galleryModalDesc"></p><div class="gallery-display"><button type="button" id="galleryPrev" aria-label="Imagen anterior">❮</button><img id="galleryModalImage" alt="Imagen provisional del proyecto"/><button type="button" id="galleryNext" aria-label="Imagen siguiente">❯</button></div><p id="galleryCounter" class="gallery-counter"></p><p class="gallery-note">Espacio preparado para agregar varias fotos reales de cada proyecto.</p></div></div>
 <section class="section alt" id="calculadora">
 <div class="container">
 <div class="section-head">
@@ -330,5 +338,29 @@ document.querySelectorAll('#servicios .detail-toggle').forEach(button => {
     button.textContent = opening ? 'Ocultar detalles' : 'Ver detalles';
   });
 });
-</script></body>
+</script><script>
+/* Visor de proyectos: reemplaza los SVG por rutas de imágenes reales cuando estén disponibles. */
+(()=>{
+ const data=[
+  {title:'Viviendas',desc:'Diseño y construcción de viviendas modernas, funcionales y adaptadas a cada familia.'},
+  {title:'Piscinas',desc:'Espacios recreativos y piscinas integradas al diseño de tu propiedad.'},
+  {title:'Proyectos arquitectónicos',desc:'Anteproyectos, planos, visualizaciones 3D y soluciones arquitectónicas.'},
+  {title:'Remodelaciones',desc:'Transformación de cocinas, baños, interiores y espacios existentes.'}
+ ];
+ const cards=[...document.querySelectorAll('.gallery-card>img')];
+ // Tres espacios por proyecto, listos para cambiar por fotografías distintas.
+ const photos=cards.map(img=>[img.src,img.src,img.src]);
+ const modal=document.getElementById('galleryModal'),title=document.getElementById('galleryModalTitle'),desc=document.getElementById('galleryModalDesc'),image=document.getElementById('galleryModalImage'),counter=document.getElementById('galleryCounter');
+ let project=0,photo=0,lastFocus=null;
+ function render(){title.textContent=data[project].title;desc.textContent=data[project].desc;image.src=photos[project][photo];image.alt='Imagen provisional de '+data[project].title+' '+(photo+1);counter.textContent='Imagen '+(photo+1)+' de '+photos[project].length;}
+ function close(){modal.hidden=true;document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+ document.querySelectorAll('[data-gallery]').forEach(button=>button.addEventListener('click',()=>{project=Number(button.dataset.gallery);photo=0;lastFocus=button;render();modal.hidden=false;document.body.style.overflow='hidden';document.getElementById('galleryClose').focus();}));
+ document.getElementById('galleryClose').addEventListener('click',close);
+ document.getElementById('galleryPrev').addEventListener('click',()=>{photo=(photo+photos[project].length-1)%photos[project].length;render();});
+ document.getElementById('galleryNext').addEventListener('click',()=>{photo=(photo+1)%photos[project].length;render();});
+ modal.addEventListener('click',e=>{if(e.target===modal)close();});
+ document.addEventListener('keydown',e=>{if(modal.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')document.getElementById('galleryPrev').click();if(e.key==='ArrowRight')document.getElementById('galleryNext').click();});
+})();
+</script>
+</body>
 </html>
